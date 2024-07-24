@@ -7,4 +7,4 @@
 
 Run the script to start the visualization:
 ```bash
-python kmeans_visualization.py
+python 2D_Kmeans_Visualization.py
