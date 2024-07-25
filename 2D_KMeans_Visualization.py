@@ -30,12 +30,12 @@ GRASS = (55, 155, 65)
 colors = [YELLOW, RED, GREEN, BLUE, PURPLE, SKY, ORANGE, GRAPE, GRASS]
 
 
-def create_text_render(x):
-    font = pygame.font.SysFont("sans", 50)
-    return font.render(x, True, WHITE)
+def create_text_render(x, size=50, color=WHITE):
+    font = pygame.font.SysFont("sans", size)
+    return font.render(x, True, color)
 
 
-X = 0
+K = 0
 points = []
 clusters = []
 labels = []
@@ -56,7 +56,7 @@ def draw_interface():
     screen.blit(create_text_render("+"), (863, 45))
     pygame.draw.rect(screen, BLACK, (950, 50, 50, 50))
     screen.blit(create_text_render("-"), (968, 42))
-    screen.blit(create_text_render("X = " + str(X)), (1050, 45))
+    screen.blit(create_text_render("K = " + str(K)), (1050, 45))
     pygame.draw.rect(screen, BLACK, (850, 125, 150, 50))
     screen.blit(create_text_render("RUN"), (882, 120))
     pygame.draw.rect(screen, BLACK, (850, 200, 150, 50))
@@ -66,26 +66,25 @@ def draw_interface():
     pygame.draw.rect(screen, BLACK, (850, 350, 150, 50))
     screen.blit(create_text_render("RESET"), (857, 345))
 
-    font_small = pygame.font.SysFont("sans", 20)
-    text_mouse = font_small.render(
-        "(" + str(mouse_x - 50) + ", " + str(mouse_y - 50) + ")", True, BLACK
-    )
     if 50 < mouse_x < 700 and 50 < mouse_y < 500:
-        screen.blit(text_mouse, (mouse_x + 20, mouse_y + 20))
+        screen.blit(
+            create_text_render(
+                "(" + str(mouse_x - 50) + ", " + str(mouse_y - 50) + ")", 20, BLACK
+            ),
+            (mouse_x + 20, mouse_y + 20),
+        )
 
-    detail_of_algo_button = font_small.render(
-        "Using Kmeans provided by scikit-learn", True, YELLOW
-    )
     if 850 < mouse_x < 1000 and 275 < mouse_y < 325:
-        screen.blit(detail_of_algo_button, (785, 250))
+        screen.blit(
+            create_text_render("Using Kmeans provided by scikit-learn", 20, YELLOW),
+            (785, 250),
+        )
 
-
-clock = pygame.time.Clock()
 
 running = True
 
 while running == True:
-    clock.tick(60)
+    pygame.time.Clock().tick(60)
     screen.fill(BACKGROUND)
 
     mouse_x, mouse_y = pygame.mouse.get_pos()
@@ -103,12 +102,12 @@ while running == True:
                 points.append(point)
 
             if 850 < mouse_x < 900 and 50 < mouse_y < 100:
-                if X < 9:
-                    X += 1
+                if K < 9:
+                    K += 1
 
             if 950 < mouse_x < 1000 and 50 < mouse_y < 100:
-                if X > 0:
-                    X -= 1
+                if K > 0:
+                    K -= 1
 
             if 850 < mouse_x < 1000 and 125 < mouse_y < 175:
                 labels = []
@@ -127,7 +126,7 @@ while running == True:
                     labels.append(label)
                     distances_to_cluster.clear()
 
-                for i in range(X):
+                for i in range(K):
                     sum_i, sum_j, cnt = 0, 0, 0
                     for j in range(len(points)):
                         if labels[j] == i:
@@ -140,18 +139,18 @@ while running == True:
 
             if 850 < mouse_x < 1000 and 200 < mouse_y < 250:
                 clusters = []
-                for i in range(X):
+                for i in range(K):
                     random_cluster_point = [randint(10, 690), randint(10, 490)]
                     clusters.append(random_cluster_point)
 
             if 850 < mouse_x < 1000 and 275 < mouse_y < 325:
-                if X > 0:
-                    kmeans = KMeans(n_clusters=X).fit(points)
+                if K > 0:
+                    kmeans = KMeans(n_clusters=K).fit(points)
                     clusters = list(kmeans.cluster_centers_)
                     labels = list(kmeans.labels_)
 
             if 850 < mouse_x < 1000 and 350 < mouse_y < 400:
-                X = 0
+                K = 0
                 points = []
                 clusters = []
                 labels = []
