@@ -1,10 +1,21 @@
 <div align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=60&center=true&vCenter=true&width=800&height=90&duration=4000&lines=Algorithm+Visualizer" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=60&center=true&vCenter=true&width=800&height=90&duration=4000&lines=KMeans+Clustering" />
 </div>
 
 # 2D KMeans Visualization
-2D KMeans Visualization is a Python-based project that visualizes the KMeans clustering algorithm in 2D using Pygame and scikit-learn.
+This project provides a visual demonstration of KMeans clustering in a 2D space using Pygame. Users can interact with the interface to add points, adjust the number of clusters, and run the KMeans algorithm to see the results in real-time.
 
 Run the script to start the visualization:
 ```bash
 python 2D_Kmeans_Visualization.py
+```
+
+---
+
+# KMeans in Data Compression
+This project demonstrates the use of KMeans clustering for image compression. It utilizes Pygame for the user interface and Matplotlib for displaying the compressed image. The application allows users to select an image, apply KMeans clustering with a specified number of clusters, and visualize the compressed result.
+Run the application:
+
+```bash
+python KMeans_in_Data_Compression.py
+```
