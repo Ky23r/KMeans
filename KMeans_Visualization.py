@@ -10,7 +10,7 @@ def distance(x, y):
 
 pygame.init()
 
-pygame.display.set_caption("2D KMeans Visualization")
+pygame.display.set_caption("KMeans Visualization")
 screen = pygame.display.set_mode((1200, 700))
 
 BACKGROUND = (126, 45, 140)
