@@ -10,7 +10,7 @@ This project provides a visual demonstration of KMeans clustering in a 2D space 
 - Pygame
 - Scikit-learn
 
-Run the application:
+***Run the application:***
 ```bash
 python Kmeans_Visualization.py
 ```
@@ -27,7 +27,7 @@ This project demonstrates the use of KMeans clustering for image compression. It
 - Scikit-learn
 - Tkinter
 
-Run the application:
+***Run the application:***
 ```bash
 python KMeans_in_Data_Compression.py
 ```
