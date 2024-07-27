@@ -66,7 +66,7 @@ def draw_interface():
     pygame.draw.rect(screen, BLACK, (850, 350, 150, 50))
     screen.blit(create_text_render("RESET"), (857, 345))
 
-    if 50 < mouse_x < 700 and 50 < mouse_y < 500:
+    if 50 < mouse_x < 750 and 50 < mouse_y < 550:
         screen.blit(
             create_text_render(
                 "(" + str(mouse_x - 50) + ", " + str(mouse_y - 50) + ")", 20, BLACK
