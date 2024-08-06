@@ -45,3 +45,12 @@ By offering an interactive and visual approach, this project aims to make the KM
 - Pygame
 
 - Scikit-learn
+
+***Run the Application***
+
+After installing the necessary libraries, you can run the application using the following command:
+
+```bash
+python KMeans_Visualization.py
+```
+This will start the Pygame window, where you can interactively explore the KMeans clustering algorithm.
