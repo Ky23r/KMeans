@@ -8,21 +8,21 @@ This project provides a visual demontration of the KMeans clustering algorithm u
 
 ***Key Features***
 
-1. Interactive Point Addition: Users can click on the panel to add data points, which will be used in the clustering process. This interactivity helps in understanding how different point distributions affect the clustering outcome.
+1. **Interactive Point Addition**: Users can click on the panel to add data points, which will be used in the clustering process. This interactivity helps in understanding how different point distributions affect the clustering outcome.
 
-2. Cluster Adjustment: The program allows users to dynamically increase or decrease the number of clusters (K). This is crucial for observing how the algorithm performs with different values of K and how it influences the grouping of data points.
+2. **Cluster Adjustment**: The program allows users to dynamically increase or decrease the number of clusters (K). This is crucial for observing how the algorithm performs with different values of K and how it influences the grouping of data points.
 
-3. Algorithm Execution: Users can run the KMeans algorithm in two different ways:
+3. **Algorithm Execution**: Users can run the KMeans algorithm in two different ways:
 
-- Manual Execution: This involves a detailed step-by-step execution of the KMeans algorithm where cluster centers are manually updated based on the mean position of assigned points. Users can randomly initialize cluster centers and label each point to the nearest center by calculating Euclidean distances. The cluster centers are then recalculated as the average position of all assigned points. This process repeats iteratively, allowing users to observe the convergence and refinement of clusters, providing a deep understanding of the KMeans algorithm's mechanics.
+- **Manual Execution**: This involves a detailed step-by-step execution of the KMeans algorithm where cluster centers are manually updated based on the mean position of assigned points. Users can randomly initialize cluster centers and label each point to the nearest center by calculating Euclidean distances. The cluster centers are then recalculated as the average position of all assigned points. This process repeats iteratively, allowing users to observe the convergence and refinement of clusters, providing a deep understanding of the KMeans algorithm's mechanics.
 
-- scikit-learn Implementation: Utilizes the efficient and optimized KMeans implementation from the scikit-learn library, providing a comparison to the manual execution.
+- **Scikit-learn Implementation**: Utilizes the efficient and optimized KMeans implementation from the Scikit-learn library, providing a comparison to the manual execution.
 
-4. Random Cluster Initialization: The program can initialize cluster centers randomly, allowing users to observe how initial cluster positions affect the final clusters.
+4. **Random Cluster Initialization**: The program can initialize cluster centers randomly, allowing users to observe how initial cluster positions affect the final clusters.
 
-5. Reset Functionality: Provides an option to reset the panel, clearing all points and cluster centers, enabling users to start a new clustering experiment from scratch.
+5. **Reset Functionality**: Provides an option to reset the panel, clearing all points and cluster centers, enabling users to start a new clustering experiment from scratch.
 
-6. Real-time Error Calculation: Displays the total error (sum of distances from points to their respective cluster centers) for the current clustering configuration, giving users an insight into the clustering performance.
+6. **Real-time Error Calculation**: Displays the total error (sum of distances from points to their respective cluster centers) for the current clustering configuration, giving users an insight into the clustering performance.
 
 ***Learning Outcomes***
 
@@ -44,4 +44,4 @@ By offering an interactive and visual approach, this project aims to make the KM
 
 - Pygame
 
-- scikit-learn
+- Scikit-learn
