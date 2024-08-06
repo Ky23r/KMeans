@@ -42,10 +42,11 @@ labels = []
 error = 0
 
 
-def draw_interface():
+def draw_interface(mouse_x, mouse_y):
     screen.blit(create_text_render("O"), (8, 1))
     screen.blit(create_text_render("x"), (790, 0))
     screen.blit(create_text_render("y"), (10, 560))
+
     pygame.draw.rect(screen, BLACK, (45, 45, 725, 5))
     pygame.draw.polygon(screen, BLACK, [(780, 47), (770, 40), (770, 55)])
     pygame.draw.rect(screen, BLACK, (45, 45, 5, 525))
@@ -54,15 +55,21 @@ def draw_interface():
 
     pygame.draw.rect(screen, BLACK, (850, 50, 50, 50))
     screen.blit(create_text_render("+"), (863, 45))
+
     pygame.draw.rect(screen, BLACK, (950, 50, 50, 50))
     screen.blit(create_text_render("-"), (968, 42))
+
     screen.blit(create_text_render("K = " + str(K)), (1050, 45))
+
     pygame.draw.rect(screen, BLACK, (850, 125, 150, 50))
     screen.blit(create_text_render("RUN"), (882, 120))
+
     pygame.draw.rect(screen, BLACK, (850, 200, 150, 50))
     screen.blit(create_text_render("RND"), (882, 195))
+
     pygame.draw.rect(screen, BLACK, (850, 275, 150, 50))
     screen.blit(create_text_render("ALGO"), (869, 270))
+
     pygame.draw.rect(screen, BLACK, (850, 350, 150, 50))
     screen.blit(create_text_render("RESET"), (857, 345))
 
@@ -89,7 +96,7 @@ while running == True:
 
     mouse_x, mouse_y = pygame.mouse.get_pos()
 
-    draw_interface()
+    draw_interface(mouse_x, mouse_y)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
