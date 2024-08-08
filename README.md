@@ -1,6 +1,6 @@
-<div align="center">
-    <h1>KMeans Visualization</h1>
-</div>
+<h1 align="center">
+    KMeans Visualization
+</h1>
 
 ***Project Overview***
 
