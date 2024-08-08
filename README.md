@@ -4,7 +4,7 @@
 
 ***Project Overview***
 
-This project provides a visual demontration of the KMeans clustering algorithm using Pygame. It allows users to interactively explore how the KMeans algorithm works by enabling them to add data points, adjust the number of clusters, and visualize the clustering process and results in real-time.
+This project provides a visual demonstration of the KMeans clustering algorithm using Pygame. It allows users to interactively explore how the KMeans algorithm works by enabling them to add data points, adjust the number of clusters, and visualize the clustering process and results in real-time.
 
 ***Key Features***
 
@@ -14,9 +14,9 @@ This project provides a visual demontration of the KMeans clustering algorithm u
 
 3. **Algorithm Execution**: Users can run the KMeans algorithm in two different ways:
 
-- **Manual Execution**: This involves a detailed step-by-step execution of the KMeans algorithm where cluster centers are manually updated based on the mean position of assigned points. Users can randomly initialize cluster centers and label each point to the nearest center by calculating Euclidean distances. The cluster centers are then recalculated as the average position of all assigned points. This process repeats iteratively, allowing users to observe the convergence and refinement of clusters, providing a deep understanding of the KMeans algorithm's mechanics.
+- **Custom Implementation**: This involves a detailed, manually coded execution of the KMeans algorithm. Users can initialize cluster centers randomly and label each point to the nearest center by calculating Euclidean distances. The cluster centers are then recalculated as the average position of all assigned points. This process repeats iteratively, allowing users to observe the convergence and refinement of clusters, providing a deep understanding of the KMeans algorithm's mechanics.
 
-- **Scikit-learn Implementation**: Utilizes the efficient and optimized KMeans implementation from the Scikit-learn library, providing a comparison to the manual execution.
+- **Scikit-learn Implementation**: Utilizes the efficient and optimized KMeans implementation from the Scikit-learn library, providing a comparison to the custom implementation.
 
 4. **Random Cluster Initialization**: The program can initialize cluster centers randomly, allowing users to observe how initial cluster positions affect the final clusters.
 
@@ -32,7 +32,7 @@ This project is designed to help users:
 
 - Observe the effects of different K values and initial cluster positions.
 
-- Compare manual algorithm execution with library-provided solutions.
+- Compare the custom algorithm execution with the library-provided solution.
 
 - Visualize the clustering process and the convergence of cluster centers.
 
@@ -53,4 +53,3 @@ After installing the necessary libraries, you can run the application using the 
 ```bash
 python KMeans_Visualization.py
 ```
-This will start the Pygame window, where you can interactively explore the KMeans clustering algorithm.
