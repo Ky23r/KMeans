@@ -29,11 +29,8 @@ This project provides a visual demonstration of the KMeans clustering algorithm 
 This project is designed to help users:
 
 - Understand the KMeans clustering algorithm through hands-on interaction.
-
 - Observe the effects of different K values and initial cluster positions.
-
 - Compare the custom algorithm execution with the library-provided solution.
-
 - Visualize the clustering process and the convergence of cluster centers.
 
 By offering an interactive and visual approach, this project aims to make the KMeans clustering algorithm more accessible and comprehensible to learners and enthusiasts.
@@ -41,9 +38,7 @@ By offering an interactive and visual approach, this project aims to make the KM
 ***Requirements***
 
 - Python 3.x
-
 - Pygame
-
 - Scikit-learn
 
 ***Run the Application***
